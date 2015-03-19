@@ -1,12 +1,16 @@
 #!/bin/sh
-info "spark..."
 
-if [ ! -x ~/bin/spark ]; then
-	cd $BASE/git
-	git clone https://github.com/holman/spark
-else
+depends() {
+	echo "git"
+}
+
+install() {
+	if [ ! -d $BASE/git/spark ]; then
+		cd $BASE/git
+		git clone https://github.com/holman/spark
+	fi
+	
 	cd $BASE/git/spark
 	git pull
-fi
-
-cp $BASE/git/spark/spark ~/bin	
+	cp $BASE/git/spark/spark ~/bin
+}
