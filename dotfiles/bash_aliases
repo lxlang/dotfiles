@@ -1,0 +1,32 @@
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -alFh'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+
+alias fucking=sudo
+
+alias untar="tar xvfz"
+alias untarb="tar xvfb"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias win7='xfreerdp -u lang.developer -g 1680x945 --plugin cliprdr --plugin rdpdr --data disk:Shared:/home/lang/Shared/Win7-VM -- 172.16.250.20'
+
+alias mysql='mysql --prompt="mysql \u@\h (\d)> "'
+alias artisan='php artisan'
+alias g='git'
