@@ -1,9 +1,0 @@
-#!/bin/sh
-
-depends() {
-	echo "exuberant-ctags"
-}
-
-install() {
-	echo -n
-}
